@@ -1,0 +1,508 @@
+/* Fondo general de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('Imagenes/Fondo.jpg') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Ajustar imagen al tamaño de la ventana */
+    color: #ccd6f6; /* Colores claros para contraste */
+}
+
+/* Contenedor principal */
+main {
+    margin-left: 250px; /* Asegurar espacio para el menú lateral */
+    padding: 2rem;
+    background: rgba(10, 25, 47, 0.9); /* Fondo semitransparente oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Sombra para profundidad */
+    color: #ccd6f6; /* Color del texto */
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 20px auto; /* Centrar horizontalmente */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 50px; /* Ajusta el tamaño según necesites */
+    height: auto;
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+
+/* Tarjetas de proyectos */
+.project-card {
+    background: rgba(17, 34, 64, 0.95); /* Fondo ligeramente opaco */
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 350px;
+    margin: 20px;
+    color: #ccd6f6;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo de las imágenes */
+.project-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Listas dentro de las tarjetas */
+.project-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: justify; /* Alineación justificada */
+}
+
+.project-card ul li {
+    margin-bottom: 10px;
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(10, 25, 47, 0.95); /* Fondo semitransparente */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 a {
+    color: #64ffda;
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: #ccd6f6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #64ffda;
+}
+
+/* Secciones */
+section {
+    margin: 50px 0;
+}
+
+/* Grid de las tarjetas */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Diseño responsivo */
+    gap: 20px;
+    justify-items: center; /* Centrar las tarjetas */
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #112240;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    background: #0a192f;
+}
+
+form button {
+    background: #64ffda;
+    color: #0a192f;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #52e0c7;
+}
+
+/* Footer */
+footer {
+    background: rgba(10, 25, 47, 0.95);
+    color: #8892b0;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366; /* Color verde característico de WhatsApp */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #20b45a; /* Efecto hover en el botón */
+    transform: scale(1.05); /* Efecto de ampliación */
+}
+
+.whatsapp-button i {
+    margin-right: 8px; /* Espaciado entre el ícono y el texto */
+    font-size: 20px; /* Tamaño del ícono */
+}
+
+/* Foto de perfil circular y centrada */
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.profile-photo img {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: 150px; /* Asegura un contenedor cuadrado */
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Recorta la imagen para ajustarla al contenedor */
+    border: 3px solid #25d366; /* Borde de color verde (puedes cambiarlo) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+}
+
+
+
+/* Contenedor del carrusel */
+.carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    overflow: hidden; /* Evitar que los elementos salgan del contenedor */
+    color: #ccd6f6;
+}
+.carousel-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #64ffda;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animación suave */
+    width: 100%; /* Asegurar que ocupa el espacio correcto */
+}
+.carousel-slide {
+    min-width: 100%; /* Cada slide ocupa el 100% del carrusel */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; /* Asegurar que padding y tamaño sean consistentes */
+}
+.carousel-slide img {
+    width: 150px; /* Tamaño de las imágenes */
+    height: 150px; /* Imagen cuadrada */
+    border-radius: 50%; /* Imagen circular */
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+}
+.carousel-slide p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 10px 0;
+    max-width: 700px; /* Limitar ancho del texto para evitar que se desborde */
+    overflow-wrap: break-word; /* Romper palabras largas si es necesario */
+}
+
+
+
+/* Sección de bienvenida */
+#home {
+    display: flex;
+    flex-direction: column; /* Apilar los elementos uno debajo del otro */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+    text-align: center; /* Alinear el texto al centro */
+    height: 60vh; /* Ocupa toda la altura de la ventana */
+    padding: 20px;
+    background-color: #0a192f; /* Fondo (opcional, puedes ajustar el color) */
+    color: #ccd6f6;
+}
+#home h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #64ffda; /* Puedes cambiar el color si lo deseas */
+}
+#home p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.profile-photo img {
+    width: 150px; /* Tamaño de la imagen */
+    height: 150px; /* Imagen cuadrada */
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Recorta la imagen si es necesario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+    border: 3px solid #64ffda; /* Borde circular con color */
+}
+
+
+/* Contenedor general para las secciones */
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px;
+    text-align: center; /* Alinear todo el contenido al centro */
+}
+
+/* Estilo específico para la sección "home" */
+#home {
+    background-color: #0a192f; /* Fondo opcional (puedes ajustarlo) */
+    color: #ccd6f6;
+    padding: 40px 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+}
+
+/* Estilo para el título y el texto */
+#home h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #64ffda; /* Color llamativo para el título */
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Foto de perfil circular */
+.profile-photo img {
+    width: 150px; /* Tamaño de la imagen */
+    height: 150px;
+    border-radius: 50%; /* Forma circular */
+    object-fit: cover;
+    border: 3px solid #64ffda; /* Borde estilizado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+}
+
+
+/* Contenedor general para las secciones */
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px;
+    text-align: center; /* Alinear todo el contenido al centro */
+}
+
+/* Estilo específico para la sección "about" */
+#about {
+    background-color: #112240; /* Fondo oscuro estilizado */
+    color: #ccd6f6;
+    padding: 40px 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #64ffda; /* Color llamativo para el título */
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(10, 25, 47, 0.95); /* Fondo semitransparente */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra del encabezado */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-icon {
+    width: 50px; /* Tamaño del logo */
+    margin-right: 10px;
+}
+
+header h1 a {
+    color: #64ffda;
+    text-decoration: none;
+    font-size: 24px; /* Ajustar tamaño del texto */
+    transition: color 0.3s ease;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin: 0 15px;
+    transition: transform 0.3s ease; /* Animación suave al pasar el mouse */
+}
+
+header ul li:hover {
+    transform: translateY(-3px); /* Efecto de elevación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra en hover */
+}
+
+header ul li a {
+    color: #ccd6f6;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+header ul li a i {
+    margin-right: 8px; /* Espaciado entre ícono y texto */
+}
+
+header ul li a:hover {
+    background-color: rgba(17, 34, 64, 0.7); /* Fondo adicional en hover */
+    color: #64ffda; /* Cambio de color al pasar el mouse */
+}
+
+/* Sección de redes sociales */
+.social-media {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(10, 25, 47, 0.95); /* Fondo oscuro */
+    color: #ccd6f6;
+    margin-top: 40px; /* Separación del resto del contenido */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.social-media h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #64ffda; /* Color llamativo */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Responsivo para pantallas más pequeñas */
+}
+
+.social-link {
+    color: #ccd6f6;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaciado entre ícono y texto */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animaciones suaves */
+}
+
+.social-link:hover {
+    background-color: rgba(17, 34, 64, 0.7); /* Fondo en hover */
+    color: #64ffda; /* Color en hover */
+    transform: scale(1.05); /* Ampliación en hover */
+}
+
+.social-link i {
+    font-size: 24px; /* Tamaño de los íconos */
+}
+
+/* Botón WhatsApp Flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px; /* Tamaño del botón */
+    height: 70px; /* Igual al ancho para hacerlo circular */
+    background-color: #25D366; /* Color verde característico de WhatsApp */
+    color: white;
+    border-radius: 50%; /* Hace el botón completamente redondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+    text-decoration: none;
+    font-size: 30px; /* Tamaño del ícono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animaciones suaves */
+    z-index: 1000;
+    animation: blink 1.5s infinite; /* Animación de parpadeo */
+}
+.whatsapp-float:hover {
+    background-color: #1ebe56; /* Verde más oscuro en hover */
+    transform: scale(1.1); /* Efecto de ampliación en hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+}
+/* Animación de parpadeo */
+@keyframes blink {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); /* Sin sombra adicional */
+        transform: scale(1); /* Tamaño original */
+    }
+    50% {
+        box-shadow: 0 0 15px 7px rgba(37, 211, 102, 0.5); /* Sombra moderada */
+        transform: scale(1.1); /* Ligero aumento */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); /* Regreso al estado inicial */
+        transform: scale(1); /* Tamaño original */
+    }
+}
+
